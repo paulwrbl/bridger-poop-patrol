@@ -33,4 +33,47 @@
     }),
     "top-left"
   );
+
+  map.on("load", function () {
+    map.addSource("service-areas", {
+      type: "geojson",
+      data: "data/service-areas.geojson",
+    });
+
+    map.addLayer({
+      id: "service-areas-fill",
+      type: "fill",
+      source: "service-areas",
+      paint: {
+        "fill-color": "#3b82f6",
+        "fill-opacity": 0.15,
+      },
+    });
+
+    map.addLayer({
+      id: "service-areas-outline",
+      type: "line",
+      source: "service-areas",
+      paint: {
+        "line-color": "#2563eb",
+        "line-width": 2,
+      },
+    });
+
+    map.addLayer({
+      id: "service-areas-labels",
+      type: "symbol",
+      source: "service-areas",
+      layout: {
+        "text-field": ["get", "ZCTA5CE10"],
+        "text-size": 13,
+        "text-font": ["DIN Pro Medium", "Arial Unicode MS Regular"],
+      },
+      paint: {
+        "text-color": "#1e40af",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5,
+      },
+    });
+  });
 })();
