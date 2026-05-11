@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridger Poop Patrol — Service Area</title>
+
+  <!-- Mapbox GL JS v3 -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+
+  <!-- Mapbox Geocoder -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.3/mapbox-gl-geocoder.min.js"></script>
+
+  <!-- Tailwind (play CDN — fine for embed, swap for production build later) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="map-wrapper">
+    <div id="map"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="src/map.js"></script>
+</body>
+</html>
