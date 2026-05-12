@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background: #FBF6EC;
 }
 
 #map {
@@ -17,11 +18,78 @@ body {
   height: 100vh;
 }
 
-.search-wrapper {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 10;
-  width: 320px;
-  max-width: calc(100% - 24px);
+/* ── Geocoder search box ── */
+.mapboxgl-ctrl-geocoder {
+  background: #FBF6EC !important;
+  border: 2px solid #3F8A9A !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(42, 36, 30, 0.1) !important;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 340px !important;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  color: #2C2C2C !important;
+  font-size: 15px !important;
+}
+
+.mapboxgl-ctrl-geocoder--input::placeholder {
+  color: #3F8A9A !important;
+  opacity: 0.7;
+}
+
+.mapboxgl-ctrl-geocoder--input:focus {
+  outline: none !important;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+  fill: #3F8A9A !important;
+}
+
+.mapboxgl-ctrl-geocoder--icon-close {
+  fill: #EE6C3B !important;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions {
+  background: #FBF6EC !important;
+  border: 2px solid #EFE7D7 !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions > li > a {
+  color: #2C2C2C !important;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions > .active > a,
+.mapboxgl-ctrl-geocoder .suggestions > li > a:hover {
+  background-color: #D9E8EB !important;
+  color: #2A241E !important;
+}
+
+/* ── Custom brand marker ── */
+.bpp-marker {
+  width: 20px;
+  height: 20px;
+  background: #EE6C3B;
+  border: 3px solid #FBF6EC;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(42, 36, 30, 0.25);
+  cursor: pointer;
+}
+
+/* ── Nav controls ── */
+.mapboxgl-ctrl-group {
+  background: #FBF6EC !important;
+  border: 2px solid #EFE7D7 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(42, 36, 30, 0.1) !important;
+}
+
+.mapboxgl-ctrl-group button + button {
+  border-color: #EFE7D7 !important;
+}
+
+.mapboxgl-ctrl-group button span {
+  filter: sepia(0.3) saturate(1.5) hue-rotate(150deg);
 }
